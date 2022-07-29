@@ -99,28 +99,22 @@ export function Header() {
         w={["100%", "100%", "91%", "80%", "65%"]}
         direction={["column", "column", "row"]}
       >
-        <Flex
-          gap={10}
-          align="center"
-          w="100%"
-          cursor={"pointer"}
-          onClick={() => navigate("/")}
-        >
+        <Flex gap={10} align="center" w="100%">
           <Image
             w={["30%", "20%", "20%", "10%"]}
             ml={10}
             src={useColorModeValue(LogoW, LogoD)}
+            cursor={"pointer"}
+            onClick={() => navigate("/")}
           />
-          <Heading textAlign={"center"} fontWeight={900}>
+          <Heading
+            textAlign={"center"}
+            fontWeight={900}
+            cursor={"pointer"}
+            onClick={() => navigate("/")}
+          >
             World View
           </Heading>
-          <Center height={16} display={["none", "none", "block", "block"]}>
-            <Divider
-              orientation="vertical"
-              borderWidth={2}
-              borderColor={useColorModeValue("black", "white")}
-            />
-          </Center>
         </Flex>
         <Box
           mt={[4, 4, 0]}
