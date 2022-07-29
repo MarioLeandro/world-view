@@ -161,9 +161,11 @@ function Country() {
               {data?.country.name} is a country located in{" "}
               {data?.country.continent.name}, there they speak{" "}
               {data?.country.languages.length} language(s), they have{" "}
-              {data?.country.currency.split(",").length} currency, the capital
-              of the country is {data?.country.capital}, and it has{" "}
-              {data?.country.states.length} states
+              {data?.country.currency
+                ? data?.country.currency.split(",").length
+                : 0}{" "}
+              currency, the capital of the country is {data?.country.capital},
+              and it has {data?.country.states.length} states
             </Text>
           </Flex>
         </Flex>
